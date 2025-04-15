@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-04-15T15:31:57.772Z",
+    "end": "2025-04-15T15:32:05.099Z",
+    "duration": 7327,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "91820541-0e91-4784-930a-c146c424099e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\pagina-com-erro.cy.js",
+      "file": "cypress\\e2e\\pagina-com-erro.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "693cc0a6-c26c-4ce3-b471-2e74b93df735",
+          "title": "Teste de Exemplo com Falha",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Página incorreta",
+              "fullTitle": "Teste de Exemplo com Falha Página incorreta",
+              "timedOut": null,
+              "duration": 5850,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://automationpratice.com.br/login');\n// Aguarda um pouco só pra capturar bem no vídeo\ncy.wait(1000);\n// Verifica o título (intencionalmente errado para forçar falha)\ncy.title().should('include', 'QAZANDO simulação erro'); // Isso vai falhar de propósito",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'QAZANDO Shop E-Commerce' to include 'QAZANDO simulação erro'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'QAZANDO Shop E-Commerce' to include 'QAZANDO simulação erro'\n    at Context.eval (webpack://automacao-web-cypress/./cypress/e2e/pagina-com-erro.cy.js:9:17)",
+                "diff": null
+              },
+              "uuid": "bb55aecf-f83c-4d5a-8354-504c73e95356",
+              "parentUUID": "693cc0a6-c26c-4ce3-b471-2e74b93df735",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "bb55aecf-f83c-4d5a-8354-504c73e95356"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 5850,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
