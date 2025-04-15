@@ -13,3 +13,5 @@ import './commands'
 
 // Importa o registro do reporter mochawesome
 import 'cypress-mochawesome-reporter/register'
+
+require('cypress-xpath');
