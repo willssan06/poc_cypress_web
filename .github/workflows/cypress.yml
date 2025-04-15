@@ -20,3 +20,9 @@ jobs:
           build: npm install
           start: ''
           wait-on: ''
+
+      - name: 📤 Publica relatório (artifact)
+        uses: actions/upload-artifact@v3.1.3
+        with:
+          name: cypress-report
+          path: cypress/reports/html/
