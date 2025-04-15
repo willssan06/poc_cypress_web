@@ -14,9 +14,16 @@ jobs:
       - name: 📥 Checkout do código
         uses: actions/checkout@v3
 
-      - name: 🧪 Executa Cypress (via action oficial)
+      - name: 🧪 Executa Cypress + Gera Relatório
         uses: cypress-io/github-action@v6
         with:
           build: npm install
           start: ''
           wait-on: ''
+          command: npm run test:report
+
+      - name: 📤 Publica relatório HTML como artifact
+        uses: actions/upload-artifact@v3.1.3
+        with:
+          name: cypress-report
+          path: cypress/reports/html/
