@@ -21,9 +21,3 @@ jobs:
           start: ''
           wait-on: ''
           command: npm run test:report
-
-      - name: 📤 Publica relatório (artifact)
-        uses: actions/upload-artifact@v3.1.3
-        with:
-          name: cypress-report
-          path: cypress/reports/html
