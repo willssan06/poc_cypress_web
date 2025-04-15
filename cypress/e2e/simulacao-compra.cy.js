@@ -1,6 +1,5 @@
-describe('Adicionar primeiro item ao carrinho', () => {
-    it('Deve adicionar o primeiro produto ao carrinho', () => {
-      // Visita o site
+describe('Adicionar item ao carrinho', () => {
+    it('Deve adicionar o produto ao carrinho', () => {
       cy.visit('https://automationpratice.com.br/shop');
       cy.xpath('(//a[@class="image"])[1]').click()
       cy.xpath('//a[text()="Add To Cart"]').click()
