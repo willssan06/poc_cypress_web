@@ -3,20 +3,10 @@
 describe('Login', () => {
     
     it('Login com sucesso', () => {
-
-        // Dado 
         cy.visit('https://automationpratice.com.br/login')
-
         cy.get('#user').type('edu@qazando.com')
-
         cy.get('#password').type('123456')
-
-        // Quando
-
         cy.get('#btnLogin').click()
-
-        // Então
-
         cy.get('#swal2-title').should('have.text', "Login realizado")
         cy.url().should('contain', '/my-account')
     })
