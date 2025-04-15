@@ -19,7 +19,7 @@ module.exports = defineConfig({
   // Configurações de vídeo
   video: true,
   videoCompression: 32,
-  videoUploadOnPasses: false, // Só faz upload se o teste falhar
+  videoUploadOnPasses: true, // Só faz upload se o teste falhar
 
   // Reporter mochawesome integrado ao GitHub Actions
   reporter: 'cypress-mochawesome-reporter',
