@@ -16,11 +16,11 @@ module.exports = defineConfig({
   videoCompression: 32,
   videoUploadOnPasses: false, // grava vídeo apenas se o teste falhar
 
-  reporter: "mochawesome",
+  reporter: "Report",
   reporterOptions: {
     reportDir: "cypress/reports",
     overwrite: false,
-    html: false,
+    html: true,
     json: true,
   },
 });
