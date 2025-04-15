@@ -1,0 +1,32 @@
+name: Cypress Tests
+
+on:
+  push:
+    branches:
+      - main # ou a branch que você quiser monitorar
+  pull_request:
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout do código
+        uses: actions/checkout@v3
+
+      - name: 🟢 Instala Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: 📦 Instala dependências
+        run: npm install
+
+      - name: 🧪 Roda testes Cypress
+        run: npm run test:report
+
+      - name: 📤 Publica relatório (artifact)
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-report
+          path: cypress/reports/html

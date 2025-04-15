@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-04-15T14:39:09.884Z",
+    "end": "2025-04-15T14:39:18.250Z",
+    "duration": 8366,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3a5b9e03-fb54-4bb5-bbf4-1af3c6c0e1c4",
+      "title": "",
+      "fullFile": "cypress\\e2e\\exemplo.cy.js",
+      "file": "cypress\\e2e\\exemplo.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c481f2e5-2e88-4767-82a2-6dbc9139476e",
+          "title": "Teste de Exemplo com Falha",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Acessa o Google e verifica o título (vai falhar)",
+              "fullTitle": "Teste de Exemplo com Falha Acessa o Google e verifica o título (vai falhar)",
+              "timedOut": null,
+              "duration": 6691,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.google.com');\n// Aguarda um pouco só pra capturar bem no vídeo\ncy.wait(1000);\n// Verifica o título (intencionalmente errado para forçar falha)\ncy.title().should('include', 'ChatGPT'); // Isso vai falhar de propósito",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'Google' to include 'ChatGPT'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'Google' to include 'ChatGPT'\n    at Context.eval (webpack://automacao-web-cypress/./cypress/e2e/exemplo.cy.js:9:17)",
+                "diff": null
+              },
+              "uuid": "39f5cfb8-1ac2-4952-8860-fe3293f77043",
+              "parentUUID": "c481f2e5-2e88-4767-82a2-6dbc9139476e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "39f5cfb8-1ac2-4952-8860-fe3293f77043"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6691,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
