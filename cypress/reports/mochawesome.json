@@ -1,0 +1,181 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-04-17T10:44:20.679Z",
+    "end": "2025-04-17T10:44:29.275Z",
+    "duration": 8596,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c85072e0-2d87-4c7f-9492-a14e6289665c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "22a630fc-37d7-4368-b258-b82cfe891ea2",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login com sucesso",
+              "fullTitle": "Login Login com sucesso",
+              "timedOut": null,
+              "duration": 2000,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\login.cy.js\"\n}",
+              "code": "cy.visit('https://automationpratice.com.br/login');\ncy.get('#user').type('edu@qazando.com');\ncy.get('#password').type('123456');\ncy.get('#btnLogin').click();\ncy.get('#swal2-title').should('have.text', \"Login realizado\");\ncy.url().should('contain', '/my-account');",
+              "err": {},
+              "uuid": "f242f113-d77c-4aec-b66d-011187107232",
+              "parentUUID": "22a630fc-37d7-4368-b258-b82cfe891ea2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com email vazio",
+              "fullTitle": "Login Login com email vazio",
+              "timedOut": null,
+              "duration": 752,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\login.cy.js\"\n}",
+              "code": "cy.visit('https://automationpratice.com.br/login');\ncy.get('#password').type('123456');\ncy.get('#btnLogin').click();\ncy.get('.invalid_input').should('have.text', \"E-mail inválido.\");",
+              "err": {},
+              "uuid": "c45fd3a7-a461-4295-b4c3-bb1dfa517e78",
+              "parentUUID": "22a630fc-37d7-4368-b258-b82cfe891ea2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com senha vazia",
+              "fullTitle": "Login Login com senha vazia",
+              "timedOut": null,
+              "duration": 1139,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\login.cy.js\"\n}",
+              "code": "cy.visit('https://automationpratice.com.br/login');\ncy.get('#user').type('edu@qazando.com');\ncy.get('#btnLogin').click();\ncy.get('.invalid_input').should('have.text', \"Senha inválida.\");",
+              "err": {},
+              "uuid": "db718670-ba9a-47d9-ad64-ce93a019258c",
+              "parentUUID": "22a630fc-37d7-4368-b258-b82cfe891ea2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com email invalido",
+              "fullTitle": "Login Login com email invalido",
+              "timedOut": null,
+              "duration": 1035,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\login.cy.js\"\n}",
+              "code": "cy.visit('https://automationpratice.com.br/login');\ncy.get('#user').type('akljljljljlkjk');\ncy.get('#password').type('123456');\ncy.get('#btnLogin').click();\ncy.get('.invalid_input').should('have.text', \"E-mail inválido.\");",
+              "err": {},
+              "uuid": "4a2a113c-9044-479e-980e-b21fc2eb5374",
+              "parentUUID": "22a630fc-37d7-4368-b258-b82cfe891ea2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com senha invalida",
+              "fullTitle": "Login Login com senha invalida",
+              "timedOut": null,
+              "duration": 982,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\login.cy.js\"\n}",
+              "code": "cy.visit('https://automationpratice.com.br/login');\ncy.get('#user').type('edu@qazando.com');\ncy.get('#password').type('123');\ncy.get('#btnLogin').click();\ncy.get('.invalid_input').should('have.text', \"Senha inválida.\");",
+              "err": {},
+              "uuid": "f2996f91-753c-4eb0-a550-596fd9c4e8f9",
+              "parentUUID": "22a630fc-37d7-4368-b258-b82cfe891ea2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f242f113-d77c-4aec-b66d-011187107232",
+            "c45fd3a7-a461-4295-b4c3-bb1dfa517e78",
+            "db718670-ba9a-47d9-ad64-ce93a019258c",
+            "4a2a113c-9044-479e-980e-b21fc2eb5374",
+            "f2996f91-753c-4eb0-a550-596fd9c4e8f9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5908,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -20,5 +20,3 @@ jobs:
           build: npm install
           start: ''
           wait-on: ''
-
-      

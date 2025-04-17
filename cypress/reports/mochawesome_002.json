@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-04-17T10:44:44.823Z",
+    "end": "2025-04-17T10:44:50.883Z",
+    "duration": 6060,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c6d9899f-486e-4dd8-a1d6-3055d93519cd",
+      "title": "",
+      "fullFile": "cypress\\e2e\\simulacao-compra.cy.js",
+      "file": "cypress\\e2e\\simulacao-compra.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d51e2472-86fc-4c08-946a-cc2ed6561cf7",
+          "title": "Adicionar item ao carrinho",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve adicionar o produto ao carrinho",
+              "fullTitle": "Adicionar item ao carrinho Deve adicionar o produto ao carrinho",
+              "timedOut": null,
+              "duration": 4525,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\simulacao-compra.cy.js\"\n}",
+              "code": "cy.visit('https://automationpratice.com.br/shop');\ncy.xpath('(//a[@class=\"image\"])[1]').click();\ncy.xpath('//a[text()=\"Add To Cart\"]').click();\ncy.xpath('(//a[@class=\"offcanvas-toggle\"])[2]').click({\n  force: true\n});\ncy.visit('https://automationpratice.com.br/product-details-one/1#!');\ncy.xpath('//a[text()=\"View Cart\"]').click();\ncy.xpath('(//a[text()=\"Green Dress For Woman\"])[2]').should('have.text', \"Green Dress For Woman\");",
+              "err": {},
+              "uuid": "3588e392-8b6d-48c5-8696-79fe812a52b9",
+              "parentUUID": "d51e2472-86fc-4c08-946a-cc2ed6561cf7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3588e392-8b6d-48c5-8696-79fe812a52b9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4525,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,30 +1,24 @@
-const { defineConfig } = require('cypress');
+const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
-    // Configurações dos testes e2e
     setupNodeEvents(on, config) {
-      // Ativa o plugin do cypress-mochawesome-reporter
-      require('cypress-mochawesome-reporter/plugin')(on);
-      return config;
+      // eventos podem ser configurados aqui se precisar
     },
-    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
-    supportFile: 'cypress/support/e2e.js',
+    specPattern: "cypress/e2e/**/*.cy.{js,jsx,ts,tsx}",
+    supportFile: "cypress/support/e2e.js",
   },
 
-  // Pastas de artefatos
-  screenshotsFolder: 'cypress/screenshots',
-  videosFolder: 'cypress/videos',
+  screenshotsFolder: "cypress/screenshots",
+  videosFolder: "cypress/videos",
 
-  // Configurações de vídeo
   video: true,
   videoCompression: 32,
-  videoUploadOnPasses: true, // Só faz upload se o teste falhar
+  videoUploadOnPasses: false, // grava vídeo apenas se o teste falhar
 
-  // Reporter mochawesome integrado ao GitHub Actions
-  reporter: 'cypress-mochawesome-reporter',
+  reporter: "mochawesome",
   reporterOptions: {
-    reportDir: 'cypress/reports/html',
+    reportDir: "cypress/reports",
     overwrite: false,
     html: true,
     json: true,
