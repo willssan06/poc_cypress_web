@@ -1,45 +1,44 @@
 /// <reference types="cypress"/>
+import LoginPage from '../support/pages/LoginPage'
+
+const loginPage = new LoginPage()
 
 describe('Login', () => {
-    
-    it('Login com sucesso', () => {
-        cy.visit('https://automationpratice.com.br/login')
-        cy.get('#user').type('edu@qazando.com')
-        cy.get('#password').type('123456')
-        cy.get('#btnLogin').click()
-        cy.get('#swal2-title').should('have.text', "Login realizado")
-        cy.url().should('contain', '/my-account')
-    })
-    it('Login com email vazio', () => {
+  it('Login com sucesso', () => {
+    loginPage.acessarLogin()
+    loginPage.preencherEmail('edu@qazando.com')
+    loginPage.preencherSenha('123456')
+    loginPage.clicarLogin()
+    loginPage.validarLoginComSucesso()
+  })
 
-        cy.visit('https://automationpratice.com.br/login')
-        cy.get('#password').type('123456')
-        cy.get('#btnLogin').click()
-        cy.get('.invalid_input').should('have.text', "E-mail inválido.")
-    })
-    it('Login com senha vazia', () => {
+  it('Login com email vazio', () => {
+    loginPage.acessarLogin()
+    loginPage.preencherSenha('123456')
+    loginPage.clicarLogin()
+    loginPage.validarMensagemErro('E-mail inválido.')
+  })
 
-        cy.visit('https://automationpratice.com.br/login')
-        cy.get('#user').type('edu@qazando.com')
-        cy.get('#btnLogin').click()
-        cy.get('.invalid_input').should('have.text', "Senha inválida.")
+  it('Login com senha vazia', () => {
+    loginPage.acessarLogin()
+    loginPage.preencherEmail('edu@qazando.com')
+    loginPage.clicarLogin()
+    loginPage.validarMensagemErro('Senha inválida.')
+  })
 
-    })
-    it('Login com email invalido', () => {
+  it('Login com email inválido', () => {
+    loginPage.acessarLogin()
+    loginPage.preencherEmail('akljljljljlkjk')
+    loginPage.preencherSenha('123456')
+    loginPage.clicarLogin()
+    loginPage.validarMensagemErro('E-mail inválido.')
+  })
 
-        cy.visit('https://automationpratice.com.br/login')
-        cy.get('#user').type('akljljljljlkjk')
-        cy.get('#password').type('123456')
-        cy.get('#btnLogin').click()
-        cy.get('.invalid_input').should('have.text', "E-mail inválido.")
-
-    })
-    it('Login com senha invalida', () => {
-        cy.visit('https://automationpratice.com.br/login')
-        cy.get('#user').type('edu@qazando.com')
-        cy.get('#password').type('123')
-        cy.get('#btnLogin').click()
-        cy.get('.invalid_input').should('have.text', "Senha inválida.")
-    })
+  it('Login com senha inválida', () => {
+    loginPage.acessarLogin()
+    loginPage.preencherEmail('edu@qazando.com')
+    loginPage.preencherSenha('123')
+    loginPage.clicarLogin()
+    loginPage.validarMensagemErro('Senha inválida.')
+  })
 })
-// automação web cypress
