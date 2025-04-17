@@ -9,4 +9,3 @@ describe('Teste de Exemplo com Falha', () => {
       cy.title().should('include', 'QAZANDO simulação erro'); // Isso vai falhar de propósito
     });
   });
-  // teste para a minha vida
