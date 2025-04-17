@@ -31,4 +31,5 @@ class CarrinhoPage {
   }
   
   export default CarrinhoPage
+  // teste
   

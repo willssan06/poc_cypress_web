@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-04-17T18:12:08.182Z",
+    "end": "2025-04-17T18:12:16.972Z",
+    "duration": 8790,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6e85c72f-3825-47b6-b82f-c6e5293e5581",
+      "title": "",
+      "fullFile": "cypress\\e2e\\pagina-com-erro.cy.js",
+      "file": "cypress\\e2e\\pagina-com-erro.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e4fc2245-30c4-4e3b-b659-b3a2fdd5b8f0",
+          "title": "Teste de Exemplo com Falha",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Página incorreta",
+              "fullTitle": "Teste de Exemplo com Falha Página incorreta",
+              "timedOut": null,
+              "duration": 6028,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\pagina-com-erro.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\pagina-com-erro.cy.js\\\\Teste de Exemplo com Falha -- Página incorreta (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "paginaErroPage.acessarLogin();\npaginaErroPage.validarTituloEsperado('QAZANDO simulação erro'); // Vai falhar",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'QAZANDO Shop E-Commerce' to include 'QAZANDO simulação erro'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'QAZANDO Shop E-Commerce' to include 'QAZANDO simulação erro'\n    at PaginaErroPage.validarTituloEsperado (webpack://automacao-web-cypress/./cypress/support/pages/PaginaErroPage.js:10:17)\n    at Context.eval (webpack://automacao-web-cypress/./cypress/e2e/pagina-com-erro.cy.js:9:19)",
+                "diff": null
+              },
+              "uuid": "2b2a8028-9846-48a5-9c20-cba39be8475f",
+              "parentUUID": "e4fc2245-30c4-4e3b-b659-b3a2fdd5b8f0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "2b2a8028-9846-48a5-9c20-cba39be8475f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6028,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-04-17T18:11:52.415Z",
+    "end": "2025-04-17T18:12:01.165Z",
+    "duration": 8750,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "17c0819d-8858-4bc9-8898-939679605b2f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d808a793-37ce-4051-9d96-730d1d0ca6a4",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login com sucesso",
+              "fullTitle": "Login Login com sucesso",
+              "timedOut": null,
+              "duration": 2005,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\login.cy.js\"\n}",
+              "code": "loginPage.acessarLogin();\nloginPage.preencherEmail('edu@qazando.com');\nloginPage.preencherSenha('123456');\nloginPage.clicarLogin();\nloginPage.validarLoginComSucesso();",
+              "err": {},
+              "uuid": "6ccebe01-792a-4842-a264-dd6dd66f623a",
+              "parentUUID": "d808a793-37ce-4051-9d96-730d1d0ca6a4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com email vazio",
+              "fullTitle": "Login Login com email vazio",
+              "timedOut": null,
+              "duration": 801,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\login.cy.js\"\n}",
+              "code": "loginPage.acessarLogin();\nloginPage.preencherSenha('123456');\nloginPage.clicarLogin();\nloginPage.validarMensagemErro('E-mail inválido.');",
+              "err": {},
+              "uuid": "cbad2bf2-86b0-44e0-87fe-c0f77cae42a1",
+              "parentUUID": "d808a793-37ce-4051-9d96-730d1d0ca6a4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com senha vazia",
+              "fullTitle": "Login Login com senha vazia",
+              "timedOut": null,
+              "duration": 883,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\login.cy.js\"\n}",
+              "code": "loginPage.acessarLogin();\nloginPage.preencherEmail('edu@qazando.com');\nloginPage.clicarLogin();\nloginPage.validarMensagemErro('Senha inválida.');",
+              "err": {},
+              "uuid": "b8f638b2-f4c1-42e8-b735-1b807cdea305",
+              "parentUUID": "d808a793-37ce-4051-9d96-730d1d0ca6a4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com email inválido",
+              "fullTitle": "Login Login com email inválido",
+              "timedOut": null,
+              "duration": 1106,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\login.cy.js\"\n}",
+              "code": "loginPage.acessarLogin();\nloginPage.preencherEmail('akljljljljlkjk');\nloginPage.preencherSenha('123456');\nloginPage.clicarLogin();\nloginPage.validarMensagemErro('E-mail inválido.');",
+              "err": {},
+              "uuid": "238d71a0-49bc-4661-9c0b-1ae097c1fe96",
+              "parentUUID": "d808a793-37ce-4051-9d96-730d1d0ca6a4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com senha inválida",
+              "fullTitle": "Login Login com senha inválida",
+              "timedOut": null,
+              "duration": 1038,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\login.cy.js\"\n}",
+              "code": "loginPage.acessarLogin();\nloginPage.preencherEmail('edu@qazando.com');\nloginPage.preencherSenha('123');\nloginPage.clicarLogin();\nloginPage.validarMensagemErro('Senha inválida.');",
+              "err": {},
+              "uuid": "a0169e3a-33a4-47c6-bbc2-4e532b58640b",
+              "parentUUID": "d808a793-37ce-4051-9d96-730d1d0ca6a4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6ccebe01-792a-4842-a264-dd6dd66f623a",
+            "cbad2bf2-86b0-44e0-87fe-c0f77cae42a1",
+            "b8f638b2-f4c1-42e8-b735-1b807cdea305",
+            "238d71a0-49bc-4661-9c0b-1ae097c1fe96",
+            "a0169e3a-33a4-47c6-bbc2-4e532b58640b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5833,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
